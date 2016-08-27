@@ -1,0 +1,61 @@
+/* Samuel Lee
+ * Project 3.c
+ * Goal: write a program to simulate a virtual memory system, reading in virtual memory address requests from an input file and writing out physical memory addresses to an output file.  For this project, we will simulate a 16-bit virtual address space, 16KB of main memory, and 2KB page sizes.
+ */
+
+#include <stdio.h>
+#include <string.h> // for strcat()
+#include <stdlib.h> // for exit()
+
+#define SIZE 256        // string size
+#define DEBUG 0         // print debug flag
+#define TRUE 1
+#define FALSE 0
+#define sizeV 32
+#define sizeP 8
+
+
+char buffer[SIZE] ="";                       //array shared resource
+int front = 0;	
+int rear = 0;                        	//front and rear for enqueue and dequeue
+int intfileptr = 0;				//initialzie in file pointer		
+int virtaddr[sizeV]= {};
+int phyaddr[sizeP] ={};
+
+typedef struct
+{ 
+
+}
+
+int main(int argc, char *argv[])
+{ FILE *infileptr =NULL; // pointer to disk
+  //argv[0]=executable name
+  //argv[1]=inputfilename
+  //argv[2]=outputfilename
+  
+  if(argc != 3)
+  { //error case
+
+  }
+  //open file
+  infileppr = fopen(arg[1],"r");
+  if(infileptr==NULL)
+  { //error case
+
+  }
+  
+  //read from file.
+  while(fgets(buffer,sizeof(buffer), infileptr!=NULL)
+  { 
+    //load to virtaddr from buffer
+    if(DEBUG) printf("read:%s\n", buffer);
+    sscanf(buffer, "%x", &virtaddr);
+    
+        
+
+
+    //print to string
+    sprintf(buffer, "0x %x %04\n", phyaddr);
+
+  }
+}
